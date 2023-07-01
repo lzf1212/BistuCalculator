@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--    显示模块-->
+    <LinearLayout
+        android:id="@+id/edit_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#eef0ef"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+
+            <TextView
+                android:id="@+id/input_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dp"
+                android:layout_marginRight="30dp"
+                android:text="0"
+                android:textSize="44sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+
+            <TextView
+                android:id="@+id/result_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:text=""
+                android:textSize="44sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--    输入按键区域固定在底部-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <!--        输入键盘模块-->
+        <LinearLayout
+            android:id="@+id/input_keyword"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+            <!--        第一行-->
+            <LinearLayout
+                android:id="@+id/line_1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_clear"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn"
+                    android:text="AC"
+                    android:textColor="#ea7e43"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/button_back"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn"
+                    android:text="&lt;"
+                    android:textColor="#585c64"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/button_neg"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn"
+                    android:text="neg"
+                    android:textColor="#585c64"
+                    android:textSize="24sp" />
+
+
+                <Button
+                    android:id="@+id/button_add"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn"
+                    android:text="+"
+                    android:textColor="#585c64"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <!--        第二行-->
+            <LinearLayout
+                android:id="@+id/line_2"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn"
+                    android:text="7"
+                    android:textColor="#585c64"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/button_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn"
+                    android:text="8"
+                    android:textColor="#585c64"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/button_9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn"
+                    android:text="9"
+                    android:textColor="#585c64"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/button_sub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn"
+                    android:text="-"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <!--        第三行-->
+            <LinearLayout
+                android:id="@+id/line_3"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn"
+                    android:text="4"
+                    android:textColor="#585c64"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/button_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn"
+                    android:text="5"
+                    android:textColor="#585c64"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/button_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn"
+                    android:text="6"
+                    android:textColor="#585c64"
+                    android:textSize="24sp" />
+
+
+                <Button
+                    android:id="@+id/button_mul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_btn"
+                    android:text="*"
+                    android:textColor="#585c64"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <!--        第四行及第五行-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:orientation="horizontal">
+                <!--            下面两行 左边的六个按钮-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+                    <!--                第一行的三个-->
+                    <LinearLayout
+                        android:id="@+id/line_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp">
+
+                        <Button
+                            android:id="@+id/button_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_btn"
+                            android:text="1"
+                            android:textColor="#585c64"
+                            android:textSize="24sp" />
+
+                        <Button
+                            android:id="@+id/button_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_btn"
+                            android:text="2"
+                            android:textColor="#585c64"
+                            android:textSize="24sp" />
+
+                        <Button
+                            android:id="@+id/button_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_btn"
+                            android:text="3"
+                            android:textColor="#585c64"
+                            android:textSize="24sp" />
+
+                        <Button
+                            android:id="@+id/button_div"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_btn"
+                            android:text="/"
+                            android:textColor="#585c64"
+                            android:textSize="24sp" />
+                    </LinearLayout>
+                    <!--                第二行的三个-->
+                    <LinearLayout
+                        android:id="@+id/line_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp">
+
+                        <Button
+                            android:id="@+id/button_sqrt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_btn"
+                            android:text="√"
+                            android:textColor="#585c64"
+                            android:textSize="24sp" />
+
+                        <Button
+                            android:id="@+id/button_0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_btn"
+                            android:text="0"
+                            android:textColor="#585c64"
+                            android:textSize="24sp" />
+
+                        <Button
+                            android:id="@+id/button_dot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_btn"
+                            android:text="."
+                            android:textColor="#585c64"
+                            android:textSize="24sp" />
+
+                        <Button
+                            android:id="@+id/button_result"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_btn_equal"
+                            android:text="="
+                            android:textColor="#fff"
+                            android:textSize="24sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--            等于符号-->
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
